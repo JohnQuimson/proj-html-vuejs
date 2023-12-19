@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  padding-top: 300px;
 
   h1 {
     font-size: 130px;
