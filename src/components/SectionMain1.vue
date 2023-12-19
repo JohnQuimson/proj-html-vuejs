@@ -12,7 +12,7 @@ export default {
 
 <template>
   <section class="music-is-life">
-    <h2>Music Is Life</h2>
+    <h2>Latest band News</h2>
     <hr />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet
@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .music-is-life {
-  background-color: #252a33;
+  background-color: #323844;
   display: flex;
   flex-direction: column;
   align-items: center;
