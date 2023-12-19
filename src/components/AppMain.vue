@@ -1,4 +1,6 @@
 <script>
+import SectionMain1 from './SectionMain1.vue';
+
 export default {
   name: 'Main',
 
@@ -6,10 +8,14 @@ export default {
     return {};
   },
 
-  components: {},
+  components: {
+    SectionMain1,
+  },
 };
 </script>
 
-<template></template>
+<template>
+  <SectionMain1 />
+</template>
 
 <style lang="scss" scoped></style>
