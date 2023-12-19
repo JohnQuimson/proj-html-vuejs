@@ -1,0 +1,32 @@
+ul {
+  list-style-type: none;
+}
+
+/* 
+---------------------
+CUSTOM SCROLL-BAR
+---------------------
+*/
+
+/* Larghezza */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+/* Percorso (in questo caso nascosto) */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* stile scroll-bar */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(110, 110, 110, 0.8);
+  border-radius: 20px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
