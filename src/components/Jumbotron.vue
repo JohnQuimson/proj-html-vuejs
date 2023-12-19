@@ -15,7 +15,7 @@ export default {
     <h1>Untold Stories</h1>
     <p>There is an untold story behind every favourite song.</p>
     <div class="cont-buttons">
-      <button>lastest album</button>
+      <button class="active">lastest album</button>
       <button>live dates</button>
     </div>
   </div>
@@ -24,5 +24,41 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+
+  h1 {
+    font-size: 130px;
+  }
+
+  p {
+    font-size: 19px;
+  }
+
+  .cont-buttons {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+
+    button {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      text-transform: uppercase;
+      padding: 8px 20px;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    .active {
+      background-color: #ec4958;
+      border: none;
+    }
+  }
 }
 </style>

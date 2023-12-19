@@ -35,8 +35,10 @@ export default {
 
 header {
   background-image: url(../../public/img/images/home_slider.jpg);
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+  height: 100vh;
   .navbar {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;

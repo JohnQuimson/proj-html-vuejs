@@ -28,7 +28,4 @@ export default {
 
 <style lang="scss">
 @use './assets/scss/style.scss' as *;
-
-header {
-}
 </style>
