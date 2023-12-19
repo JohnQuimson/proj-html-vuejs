@@ -5,7 +5,7 @@
 
 </h1>
 
-<h4 align="center">Website of the famous Music band <a href="#" target="_blank">AVATA MUSIC</a>.</h4>
+<h4 align="center">Website of the famous Music band <a href="#" target="_blank">AVADA MUSIC</a>.</h4>
 
 <!-- <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
@@ -33,7 +33,7 @@
 
 ## Description
 
-Website of the famous music brand Avata Music, we can find their story and their discography.
+Website of the famous music brand Avada Music, we can find their story and their discography.
 We can also sign up to live dates.
 
 ## How To Use

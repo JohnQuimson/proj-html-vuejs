@@ -1,4 +1,7 @@
 <script>
+import Logo from './Logo.vue';
+import Jumbotron from './Jumbotron.vue';
+
 export default {
   name: 'Header',
 
@@ -6,12 +9,43 @@ export default {
     return {};
   },
 
-  components: {},
+  components: {
+    Logo,
+    Jumbotron,
+  },
 };
 </script>
 
 <template>
-  <header></header>
+  <header>
+    <!-- Navbar -->
+    <div class="navbar">
+      <logo />
+      <div class="menu-header">
+        <font-awesome-icon icon="fa-solid fa-bars" />
+      </div>
+    </div>
+    <!-- Jumbotron -->
+    <Jumbotron />
+  </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/style.scss' as *;
+
+header {
+  background-image: url(../../public/img/images/home_slider.jpg);
+  .navbar {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+
+    .menu-header {
+      color: white;
+      font-size: 20px;
+    }
+  }
+}
+</style>
