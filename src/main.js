@@ -6,6 +6,8 @@ import './assets/scss/style.scss';
 // JS entry point
 import './assets/js/main';
 
+// BOOTSTRAP
+
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
