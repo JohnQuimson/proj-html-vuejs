@@ -1,13 +1,24 @@
 <script>
+import FooterTop from './FooterTop.vue';
+import FooterBottom from './FooterBottom.vue';
+
 export default {
   name: 'Footer',
   data() {
     return {};
   },
-  components: {},
+  components: {
+    FooterTop,
+    FooterBottom,
+  },
 };
 </script>
 
-<template></template>
+<template>
+  <footer>
+    <FooterTop />
+    <FooterBottom />
+  </footer>
+</template>
 
 <style lang="scss"></style>

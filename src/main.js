@@ -6,7 +6,8 @@ import './assets/scss/style.scss';
 // JS entry point
 import './assets/js/main';
 
-// BOOTSTRAP
+// // BOOTSTRAP
+// import 'bootstrap/js/bootstrap';
 
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core';
