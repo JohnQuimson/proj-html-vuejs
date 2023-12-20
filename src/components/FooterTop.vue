@@ -33,16 +33,15 @@ export default {
 
 <style lang="scss">
 .footer-top {
-  height: 10vh;
   background-color: #323844;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
+  padding: 40px 30px;
 
   .cont-left {
     .cont-logo {
-      height: 100%;
+      height: 50px;
 
       img {
         height: 100%;
@@ -62,6 +61,11 @@ export default {
         a {
           color: #797d86;
           font-size: 15px;
+          text-decoration: none;
+
+          &:hover {
+            color: white;
+          }
         }
       }
     }
