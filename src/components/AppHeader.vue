@@ -35,6 +35,7 @@ export default {
 
 header {
   background-image: url(../../public/img/images/home_slider.jpg);
+  background-size: cover;
 
   background-repeat: no-repeat;
   height: 100vh;
