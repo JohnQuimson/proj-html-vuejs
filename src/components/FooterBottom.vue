@@ -45,9 +45,9 @@ export default {
         </li>
       </ul>
     </div>
-    <div class="back-up">
+    <a class="back-up" href="#">
       <a href="#"> <font-awesome-icon icon="fa-solid fa-chevron-up" /></a>
-    </div>
+    </a>
   </div>
 </template>
 
