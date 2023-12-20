@@ -28,6 +28,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/style.scss' as *;
 .section-video {
   height: 90vh;
   background-image: url(../../public/img/images/home-testimonial-parallax.jpg);
@@ -43,6 +44,8 @@ export default {
     text-align: center;
     line-height: 30px;
     font-size: 20px;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 1px;
   }
 
   .cont-play-btn {

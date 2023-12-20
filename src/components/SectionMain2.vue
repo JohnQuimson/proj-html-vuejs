@@ -1,6 +1,6 @@
 <script>
 import BigButton from './BigButton.vue';
-// import CardNews from './CardNews.vue';
+//import CardNews from './CardNews.vue';
 
 export default {
   name: 'Latest Band News',
