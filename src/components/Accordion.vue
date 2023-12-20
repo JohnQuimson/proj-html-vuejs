@@ -86,10 +86,6 @@ export default {
               :src="`../../public/img/images/accordion-imgs/${element.pic}`"
               alt=""
             />
-            <!-- <img
-              src="../../public/img/images/accordion-imgs/gem-fest.jpg"
-              alt=""
-            /> -->
           </div>
           <div class="cont-info">
             <span> {{ element.title }}</span>
@@ -150,7 +146,17 @@ export default {
       gap: 40px;
       border: none;
 
+      .cont-img {
+        width: 30%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
       .cont-info {
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: start;
