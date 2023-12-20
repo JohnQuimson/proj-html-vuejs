@@ -1,6 +1,7 @@
 <script>
 import Logo from './Logo.vue';
 import Jumbotron from './Jumbotron.vue';
+import Sidebar from './Sidebar.vue';
 
 export default {
   name: 'Header',
@@ -12,6 +13,7 @@ export default {
   components: {
     Logo,
     Jumbotron,
+    Sidebar,
   },
 };
 </script>
@@ -21,9 +23,7 @@ export default {
     <!-- Navbar -->
     <div class="navbar">
       <logo />
-      <div class="menu-header">
-        <font-awesome-icon icon="fa-solid fa-bars" />
-      </div>
+      <Sidebar />
     </div>
     <!-- Jumbotron -->
     <Jumbotron />
@@ -48,11 +48,6 @@ header {
     top: 0;
     right: 0;
     left: 0;
-
-    .menu-header {
-      color: white;
-      font-size: 20px;
-    }
   }
 }
 </style>

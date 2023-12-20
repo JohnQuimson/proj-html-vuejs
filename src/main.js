@@ -24,6 +24,8 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 // youtube
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+// X
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 // chevron up
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
@@ -35,7 +37,8 @@ library.add(
   faXTwitter,
   faInstagram,
   faYoutube,
-  faChevronUp
+  faChevronUp,
+  faXmark
 );
 // Vue App
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
