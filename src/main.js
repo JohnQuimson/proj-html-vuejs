@@ -16,7 +16,25 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 // Menu Header
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+// facebook
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+// twitter
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+// instagram
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+// youtube
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faBars);
+// chevron up
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+  faBars,
+  faFacebookF,
+  faXTwitter,
+  faInstagram,
+  faYoutube,
+  faChevronUp
+);
 // Vue App
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

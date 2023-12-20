@@ -31,7 +31,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer-top {
   background-color: #323844;
   display: flex;
