@@ -65,116 +65,17 @@ export default {
       aliquid id maiores quos voluptatibus
     </p>
     <div class="news-container">
-      <!-- LEFT -->
-      <div class="left-cont col-md-8">
-        <div class="col-12">
-          <!-- CARD ELEMENT 1 -->
-          <div class="card-element">
-            <!-- IMG -->
-            <div class="cont-img">
-              <img
-                :src="`../../public/img/images/${latestNews.card1.img}.jpg`"
-                :alt="latestNews.card1.title"
-              />
-            </div>
-            <!-- TEXT -->
-            <div class="cont-text">
-              <h4>{{ latestNews.card1.title }}</h4>
-              <p>{{ latestNews.card1.paragraph }}</p>
-            </div>
-          </div>
-        </div>
+      <div class="cont-sx">
+        <div class="elem-orizz">1</div>
         <div class="cont-sx-centro">
-          <div class="col-6">
-            <!-- CARD ELEMENT 2 -->
-            <div class="card-element">
-              <!-- IMG -->
-              <div class="cont-img">
-                <img
-                  :src="`../../public/img/images/${latestNews.card2.img}.jpg`"
-                  :alt="latestNews.card2.title"
-                />
-              </div>
-              <!-- TEXT -->
-              <div class="cont-text">
-                <h4>{{ latestNews.card2.title }}</h4>
-                <p>{{ latestNews.card2.paragraph }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <!-- CARD ELEMENT 3 -->
-            <div class="card-element">
-              <!-- IMG -->
-              <div class="cont-img">
-                <img
-                  :src="`../../public/img/images/${latestNews.card3.img}.jpg`"
-                  :alt="latestNews.card3.title"
-                />
-              </div>
-              <!-- TEXT -->
-              <div class="cont-text">
-                <h4>{{ latestNews.card3.title }}</h4>
-                <p>{{ latestNews.card3.paragraph }}</p>
-              </div>
-            </div>
-          </div>
+          <div class="elem-vert">2</div>
+          <div class="elem-vert">3</div>
         </div>
-
-        <div class="col-12">
-          <!-- CARD ELEMENT 4 -->
-          <div class="card-element">
-            <!-- IMG -->
-            <div class="cont-img">
-              <img
-                :src="`../../public/img/images/${latestNews.card4.img}.jpg`"
-                :alt="latestNews.card4.title"
-              />
-            </div>
-            <!-- TEXT -->
-            <div class="cont-text">
-              <h4>{{ latestNews.card4.title }}</h4>
-              <p>{{ latestNews.card4.paragraph }}</p>
-            </div>
-          </div>
-        </div>
+        <div class="elem-orizz">4</div>
       </div>
-      <!-- RIGHT -->
-      <div class="right-cont col-md-4">
-        <div class="col-12">
-          <!-- CARD ELEMENT 5 -->
-          <div class="card-element">
-            <!-- IMG -->
-            <div class="cont-img">
-              <img
-                :src="`../../public/img/images/${latestNews.card5.img}.jpg`"
-                :alt="latestNews.card5.title"
-              />
-            </div>
-            <!-- TEXT -->
-            <div class="cont-text">
-              <h4>{{ latestNews.card5.title }}</h4>
-              <p>{{ latestNews.card5.paragraph }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <!-- CARD ELEMENT 6 -->
-          <div class="card-element">
-            <!-- IMG -->
-            <div class="cont-img">
-              <img
-                :src="`../../public/img/images/${latestNews.card6.img}.jpg`"
-                :alt="latestNews.card6.title"
-              />
-            </div>
-            <!-- TEXT -->
-            <div class="cont-text">
-              <h4>{{ latestNews.card6.title }}</h4>
-              <p>{{ latestNews.card6.paragraph }}</p>
-            </div>
-          </div>
-        </div>
+      <div class="cont-dx">
+        <div class="elem-vert">5</div>
+        <div class="elem-vert">6</div>
       </div>
     </div>
     <BigButton />
@@ -208,29 +109,44 @@ export default {
   }
 
   .news-container {
-    border: 1px solid red;
     color: white;
     width: 60%;
-    margin: 0 auto;
     display: flex;
+    height: 100vh;
+    gap: 20px;
 
-    .left-cont {
-      border: 1px solid yellow;
+    .cont-sx {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .elem-orizz {
+        border: 1px solid white;
+        height: 20%;
+      }
 
       .cont-sx-centro {
         display: flex;
-      }
+        flex: 1;
+        gap: 20px;
 
-      & > * {
-        border: 1px solid burlywood;
+        .elem-vert {
+          border: 2px solid white;
+          width: 50%;
+        }
       }
     }
 
-    .right-cont {
-      border: 1px solid orange;
+    .cont-dx {
+      border: 1px solid white;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-      & > * {
-        border: 1px solid purple;
+      .elem-vert {
+        border: 1px solid white;
         height: 50%;
       }
     }
@@ -238,36 +154,4 @@ export default {
 }
 
 //common
-.card-element {
-  display: flex;
-  flex-direction: column;
-  .cont-img {
-    width: 100%;
-    height: 50%;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .cont-text {
-    border: 1px solid red;
-    height: 50%;
-    padding: 20px;
-    background-color: #323844;
-
-    h4 {
-      color: #ec4958;
-      font-size: 18px;
-    }
-
-    p {
-      color: #7d7b8d;
-      width: 100%;
-      text-align: start;
-      margin: 0;
-    }
-  }
-}
 </style>
