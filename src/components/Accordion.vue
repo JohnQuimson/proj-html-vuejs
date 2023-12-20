@@ -3,7 +3,50 @@ export default {
   name: 'Accordion',
 
   data() {
-    return {};
+    return {
+      accordionArray: {
+        elem1: {
+          place: '17/08/2020 GEM FESTIVAL 2020 ANAKALIA, GEORGIA',
+          title: 'GEM FESTIVAL 2020',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea comtnodo consequat.',
+          pic: 'gem-fest.jpg',
+          number: 'One',
+        },
+        elem2: {
+          place: '24/9/2020 GROOVEFEST, DOMINICAL REPUBLIC',
+          title: 'GROOVEFEST 2020',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea comtnodo consequat.',
+          pic: 'groove-fest.jpg',
+          number: 'Two',
+        },
+        elem3: {
+          place: '31/10/2020 OASIS FESTIVAL 2020 MARRAKECH, MOROCCO',
+          title: 'OASIS FESTIVAL 2020',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea comtnodo consequat.',
+          pic: 'oasis-fest.jpg',
+          number: 'Three',
+        },
+        elem4: {
+          place: '07/11/2020 MOGA FESTIVAL ESSAOURIA, MOROCCO',
+          title: 'MOGA FESTIVAL 2020',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea comtnodo consequat.',
+          pic: 'moga-fest.jpg',
+          number: 'Four',
+        },
+        elem5: {
+          place: '10/12/2020 ENVISION FESTIVAL UVITA, COSTA RICA',
+          title: 'ENVISION FESTIVAL 2020',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea comtnodo consequat.',
+          pic: 'envision-fest.jpg',
+          number: 'Five',
+        },
+      },
+    };
   },
 
   components: {},
@@ -15,204 +58,44 @@ export default {
     class="jq-container accordion accordion-flush"
     id="accordionFlushExample"
   >
-    <!-- Elem 1 -->
-    <div class="accordion-item">
+    <!-- Element Accordion -->
+    <div v-for="element in accordionArray" class="accordion-item">
       <h2 class="accordion-header">
         <button
           class="jq-accordion accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne"
+          :data-bs-target="`#flush-collapse${element.number}`"
           aria-expanded="false"
-          aria-controls="flush-collapseOne"
+          :aria-controls="`flush-collapse${element.number}`"
         >
           <p>
             <span>+</span>
-            17/08/2020 GEM FESTIVAL 2020 ANAKALIA, GEORGIA
+            {{ element.place }}
           </p>
         </button>
       </h2>
       <div
-        id="flush-collapseOne"
+        :id="`flush-collapse${element.number}`"
         class="accordion-collapse collapse"
         data-bs-parent="#accordionFlushExample"
       >
         <div class="accordion-body">
           <div class="cont-img">
-            <img src="../../public/img/images/map.png" alt="" />
+            <img
+              :src="`../../public/img/images/accordion-imgs/${element.pic}`"
+              alt=""
+            />
+            <!-- <img
+              src="../../public/img/images/accordion-imgs/gem-fest.jpg"
+              alt=""
+            /> -->
           </div>
           <div class="cont-info">
-            <span>Untold Stories</span>
+            <span> {{ element.title }}</span>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea comtnodo consequat.
-            </p>
-            <button>Book now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elem 2 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="jq-accordion accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo"
-          aria-expanded="false"
-          aria-controls="flush-collapseTwo"
-        >
-          <p>
-            <span>+</span>
-            24/9/2020 GROOVEFEST DOMINICAL REPUBLIC
-          </p>
-        </button>
-      </h2>
-      <div
-        id="flush-collapseTwo"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          <div class="cont-img">
-            <img src="../../public/img/images/map.png" alt="" />
-          </div>
-          <div class="cont-info">
-            <span>Untold Stories</span>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea comtnodo consequat.
-            </p>
-            <button>Book now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elem 3 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="jq-accordion accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree"
-          aria-expanded="false"
-          aria-controls="flush-collapseThree"
-        >
-          <p>
-            <span>+</span>
-            31/10/2020 OASIS FESTIVAL 2020 MARRAKECH, MOROCCO
-          </p>
-        </button>
-      </h2>
-      <div
-        id="flush-collapseThree"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          <div class="cont-img">
-            <img src="../../public/img/images/map.png" alt="" />
-          </div>
-          <div class="cont-info">
-            <span>Untold Stories</span>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea comtnodo consequat.
-            </p>
-            <button>Book now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elem 4 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="jq-accordion accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseFour"
-          aria-expanded="false"
-          aria-controls="flush-collapseFour"
-        >
-          <p>
-            <span>+</span>
-            07/11/2020 MOGA FESTIVAL ESSAOURIA, MOROCCO
-          </p>
-        </button>
-      </h2>
-      <div
-        id="flush-collapseFour"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          <div class="cont-img">
-            <img src="../../public/img/images/map.png" alt="" />
-          </div>
-          <div class="cont-info">
-            <span>Untold Stories</span>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea comtnodo consequat.
-            </p>
-            <button>Book now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elem 5 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="jq-accordion accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseFive"
-          aria-expanded="false"
-          aria-controls="flush-collapseFive"
-        >
-          <p>
-            <span>+</span>
-            10/12/2020 ENVISION FESTIVAL UVITA, COSTA RICA
-          </p>
-        </button>
-      </h2>
-      <div
-        id="flush-collapseFive"
-        class="accordion-collapse collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          <div class="cont-img">
-            <img src="../../public/img/images/map.png" alt="" />
-          </div>
-          <div class="cont-info">
-            <span>Untold Stories</span>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea comtnodo consequat.
+              {{ element.description }}
             </p>
             <button>Book now</button>
           </div>
