@@ -1,4 +1,5 @@
 <script>
+import BigButton from './BigButton.vue';
 // import CardNews from './CardNews.vue';
 
 export default {
@@ -48,6 +49,7 @@ export default {
   },
 
   components: {
+    BigButton,
     // CardNews,
   },
 };
@@ -175,6 +177,7 @@ export default {
         </div>
       </div>
     </div>
+    <BigButton />
   </section>
 </template>
 
