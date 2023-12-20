@@ -34,7 +34,7 @@ export default {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.instagram.com/john_qms/">
             <font-awesome-icon icon="fa-brands fa-instagram" />
           </a>
         </li>

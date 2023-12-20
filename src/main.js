@@ -12,8 +12,8 @@ import './assets/js/main';
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// //star
-// import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+// IMPORT ICONS
 // Menu Header
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 // facebook
@@ -28,6 +28,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 // chevron up
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
+// LIBRARY
 library.add(
   faBars,
   faFacebookF,
