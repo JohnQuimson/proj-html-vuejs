@@ -3,10 +3,18 @@ export default {
   name: 'Section Video',
 
   data() {
-    return {};
+    return {
+      visualVideo: true,
+    };
   },
 
   components: {},
+
+  methods: {
+    togglePlay() {
+      this.visualVideo = !this.visualVideo;
+    },
+  },
 };
 </script>
 
@@ -18,11 +26,19 @@ export default {
       knew what they were doing. They're good. And they're inventive. I haven't
       heard anything this year that's as inventive. I don't really expect to.”
     </p>
-    <div class="cont-play-btn">
+    <div @click="togglePlay" v-if="visualVideo === true" class="cont-play-btn">
       <img
         src="../../public/img/images/band_interview_play_icon.png"
         alt="play-btn"
       />
+    </div>
+    <div v-else class="cont-video">
+      <img src="../../public/img/images/concert-gif.gif" alt="" />
+      <div @click.stop="togglePlay" class="close-video">
+        <span>
+          <font-awesome-icon icon="fa-solid fa-xmark" />
+        </span>
+      </div>
     </div>
   </section>
 </template>
@@ -56,6 +72,34 @@ export default {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+
+    &:hover img {
+      cursor: pointer;
+      filter: invert(100%);
+    }
+  }
+
+  .cont-video {
+    width: 500px;
+    height: 200px;
+    position: relative;
+
+    .close-video {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+
+      span {
+        color: white;
+        font-weight: 600;
+        font-size: 30px;
+      }
+
+      &:hover span {
+        cursor: pointer;
+        color: rgb(255, 208, 0);
+      }
     }
   }
 }
