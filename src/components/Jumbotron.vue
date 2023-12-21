@@ -22,6 +22,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/style.scss' as *;
 .jumbotron {
   color: white;
   display: flex;
@@ -36,6 +37,9 @@ export default {
 
   p {
     font-size: 19px;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 1px;
+    word-spacing: 1px;
   }
 
   .cont-buttons {

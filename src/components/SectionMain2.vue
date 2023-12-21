@@ -229,6 +229,7 @@ export default {
     height: 150vh;
     gap: 20px;
     margin: 60px 0 200px;
+    color: #7d7b8d;
 
     // CONT SX
     .cont-sx {

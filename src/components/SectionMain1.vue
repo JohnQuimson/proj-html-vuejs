@@ -17,6 +17,7 @@ export default {
 
 <template>
   <section class="music-is-life">
+    <div class="decoration"></div>
     <Title
       :title="store.titles.elementSection1.title"
       :paragraph="store.titles.elementSection1.paragraph"
@@ -31,6 +32,15 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 0;
+  padding: 70px 0;
+  position: relative;
+
+  .decoration {
+    position: absolute;
+    height: 15px;
+    width: 20%;
+    background-color: #ec4958;
+    top: 0;
+  }
 }
 </style>
