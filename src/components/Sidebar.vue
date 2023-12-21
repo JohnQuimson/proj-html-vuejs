@@ -36,22 +36,22 @@ export default {
     </div>
     <div class="sidebar-content">
       <ul>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Home</a>
         </li>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Meet The Band</a>
         </li>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Live Dates</a>
         </li>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Latest News</a>
         </li>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Albums</a>
         </li>
-        <li>
+        <li @click="toggleSidebar">
           <a href="#">Fans</a>
         </li>
       </ul>
@@ -74,7 +74,7 @@ export default {
   height: 60%;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: #ec4858;

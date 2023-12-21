@@ -1,24 +1,26 @@
 <script>
+import Title from './Title.vue';
+import { store } from '../store';
+
 export default {
   name: 'Music is life',
 
   data() {
-    return {};
+    return {
+      store,
+    };
   },
 
-  components: {},
+  components: { Title },
 };
 </script>
 
 <template>
   <section class="music-is-life">
-    <h2>Latest band News</h2>
-    <hr />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet
-      distinctio praesentium eum corrupti. Cumque dolore recusandae tempore
-      aliquid id maiores quos voluptatibus
-    </p>
+    <Title
+      :title="store.titles.elementSection1.title"
+      :paragraph="store.titles.elementSection1.paragraph"
+    />
   </section>
 </template>
 

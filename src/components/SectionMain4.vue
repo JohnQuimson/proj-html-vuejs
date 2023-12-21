@@ -1,30 +1,32 @@
 <script>
 import BigButton from './BigButton.vue';
 import Accordion from './Accordion.vue';
+import Title from './Title.vue';
+import { store } from '../store';
 
 export default {
   name: 'Live Dates',
 
   data() {
-    return {};
+    return {
+      store,
+    };
   },
 
   components: {
     BigButton,
     Accordion,
+    Title,
   },
 };
 </script>
 
 <template>
   <section class="live-dates">
-    <h2>Live Dates</h2>
-    <hr />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet
-      distinctio praesentium eum corrupti. Cumque dolore recusandae tempore
-      aliquid id maiores quos voluptatibus
-    </p>
+    <Title
+      :title="store.titles.elementSection4.title"
+      :paragraph="store.titles.elementSection4.paragraph"
+    />
 
     <!-- accordion -->
     <div class="cont-accordion">
