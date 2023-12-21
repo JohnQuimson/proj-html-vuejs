@@ -13,7 +13,7 @@ export default {
 
 <template>
   <h2>{{ title }}</h2>
-  <hr />
+  <div class="separator"></div>
   <p>
     {{ paragraph }}
   </p>
@@ -25,9 +25,10 @@ h2 {
   font-size: 50px;
 }
 
-hr {
-  border-color: #444e62;
+.separator {
   width: 10%;
+  border: 1px solid #444e62;
+  margin: 8px 0;
 }
 
 p {
