@@ -223,23 +223,6 @@ export default {
   justify-content: center;
   padding: 60px 0 0 0;
 
-  h2 {
-    color: #ffffff;
-    font-size: 50px;
-  }
-
-  hr {
-    border-color: #444e62;
-    width: 10%;
-  }
-
-  p {
-    color: #7d7b8d;
-    width: 40%;
-    text-align: center;
-    margin-top: 20px;
-  }
-
   .news-container {
     width: 70%;
     display: flex;
